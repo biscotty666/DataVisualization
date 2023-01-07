@@ -1,0 +1,14 @@
+body {
+  background-color: rgb(230, 212, 173);
+  margin: 0;
+  overflow: hidden;
+}
+body pre {
+  font-size: 7em;
+}
+body #vg-tooltip-element {
+  font-size: 20px;
+  color: #3e3c38;
+}
+
+/*# sourceMappingURL=App.css.map */
