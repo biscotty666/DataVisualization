@@ -7,8 +7,6 @@ const App = () => {
     <h1>Jello World</h1>
   )
 
-  
-
 }
 
 export default App;
