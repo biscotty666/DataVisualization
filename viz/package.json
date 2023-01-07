@@ -11,6 +11,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "sass": "^1.57.1",
+    "topojson": "^3.0.2",
     "vega": "^5.22.1",
     "vega-lite": "^5.6.0",
     "vega-lite-api": "^5.0.0",

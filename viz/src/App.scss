@@ -13,29 +13,21 @@ body {
     color: #3e3c38;
   }
 
-  .tick {
-    line {
-      stroke: #C0C0BB;
-    }
-    text {
-      fill: #635F5D;
-    }
-  }
-
   .marks {
-    circle {
-      fill: #137880;
+    .land {
+      fill: #137B80;
     }
-    path {
-      stroke: #137880;
-      stroke-width: 5;
-      stroke-linejoin: round;
-      stroke-linecap: round;
+    .sphere {
+      fill: #ececec;
+    }
+    .interiors {
+      fill: none;
+      stroke: #339498;
+    }
+    .graticules {
+      fill: none;
+      stroke: #dadada;
     }
   }
 
-  .axis-label {
-    font-size: 2em;
-    fill: #635F5D;
-  }
 }
