@@ -1,5 +1,5 @@
 import "./App.css";
-import { csv, scaleLinear, max, format, extent } from "d3";
+import { csv, scaleLinear, max, timeFormat, extent, scaleTime } from "d3";
 import { useData } from "./components/useData";
 import { AxisBottom } from "./components/AxisBottom";
 import { AxisLeft } from "./components/AxisLeft";
@@ -22,23 +22,23 @@ const App = () => {
   const innerHeight = height - margin.top - margin.bottom;
   const innerWidth = width - margin.left - margin.right;
 
-  const xValue = d => d.petal_length;
-  const xAxisLabel = 'Petal Length';
+  const xValue = d => d.timestamp;
+  const xAxisLabel = 'Time';
 
-  const yValue = d => d.sepal_width;
-  const yAxisLabel = 'Sepal Width';
+  const yValue = d => d.temperature;
+  const yAxisLabel = 'Temperature';
 
-  const siFormat = format('.2s');
-  const xAxisTickFormat = tickValue => siFormat(tickValue).replace('G', 'B');
+  const xAxisTickFormat = timeFormat("%a")
 
-  const xScale = scaleLinear()
+  const xScale = scaleTime()
     .domain(extent(data, xValue))
     .range([0, innerWidth])
     .nice();
 
   const yScale = scaleLinear()
     .domain(extent(data, yValue))
-    .range([0, innerHeight]);
+    .range([innerHeight, 0])
+    .nice()
 
   return (
     <svg width={width} height={height}>
@@ -47,7 +47,7 @@ const App = () => {
           xScale={xScale}
           innerHeight={innerHeight}
           tickFormat={xAxisTickFormat}
-          tickOffset={5}
+          tickOffset={7}
         />
         <text
           className="axis-label"
@@ -57,7 +57,7 @@ const App = () => {
         >
           {yAxisLabel}
         </text>
-        <AxisLeft yScale={yScale} innerWidth={innerWidth} tickOffset={5} />
+        <AxisLeft yScale={yScale} innerWidth={innerWidth} tickOffset={7} />
         <text
           className="axis-label"
           x={innerWidth / 2}
@@ -73,7 +73,7 @@ const App = () => {
           xValue={xValue}
           yValue={yValue}
           tooltipFormat={xAxisTickFormat}
-          circleRadius={7}
+          circleRadius={4}
         />
       </g>
     </svg>

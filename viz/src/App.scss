@@ -22,8 +22,16 @@ body {
     }
   }
 
-  .mark {
-    fill: #137880;
+  .marks {
+    circle {
+      fill: #137880;
+    }
+    path {
+      stroke: #137880;
+      stroke-width: 5;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
   }
 
   .axis-label {
