@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(230, 212, 173);
+  margin: 0;
+  overflow: hidden;
+}
+body label {
+  font-size: 4em;
+}
+body select {
+  font-size: 4em;
+}
+body select option {
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=App.css.map */

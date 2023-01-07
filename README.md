@@ -25,6 +25,9 @@ In addition, each significant stage has been given a specific branch so that any
 
 ## Data Resources Used
 
+[Iris Dataset](https://archive.ics.uci.edu/ml/datasets/Iris)
+
+[Sense Your City](https://grayarea.org/initiative/data-canvas-sense-your-city/)
 ## d3 Block Samples
 
 [Observable HQ](https://observablehq.com/@biscotty666)
@@ -41,13 +44,19 @@ In addition, each significant stage has been given a specific branch so that any
 
 [Nodejs Refernce](https://nodejs.org/en/docs/)
 
+[Data Visualization Styleguide (Sunlight Foundation)](https://sunlightfoundation.com/2014/03/12/datavizguide/)
+
 ## Other Data Resources
+
+[UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.php)
 
 [Reuters Graphics](https://www.reuters.com/graphics/)
 
 [Reuters Graphics GitHub](https://github.com/reuters-graphics)
 
 [The Upshot (NYT)](https://www.nytimes.com/section/upshot)
+
+[Our World in Data](https://ourworldindata.org/)
 
 [The Pudding](https://pudding.cool/)
 
@@ -64,4 +73,10 @@ In addition, each significant stage has been given a specific branch so that any
 [Graphic Detail (The Economist)](https://www.economist.com/graphic-detail)
 
 [#dataviz (Twitter)](https://twitter.com/hashtag/dataviz)
+
+[Johns Hopkins](https://ourworldindata.org/coronavirus)
+
+[UN Refugee Agency](https://www.unhcr.org/en-us/data.html)
+
+
 
