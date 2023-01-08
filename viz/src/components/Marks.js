@@ -3,7 +3,7 @@ export const Marks = ({
   yScale, 
   xScale, 
   xValue, 
-  yValue, 
+  yValue,
   tooltipFormat, 
   circleRadius = 10
 }) =>         

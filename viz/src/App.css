@@ -6,6 +6,26 @@ body {
 body pre {
   font-size: 7em;
 }
+body h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #635F5D;
+}
+body .Dropdown-root {
+  width: 300px;
+  display: inline-block;
+  font-size: 1.5em;
+}
+body .Dropdown-menu {
+  max-height: 500px;
+}
+body .menus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 60px;
+}
 body #vg-tooltip-element {
   font-size: 20px;
   color: #3e3c38;
@@ -16,12 +36,14 @@ body .tick line {
 body .tick text {
   fill: #635F5D;
 }
-body .mark {
-  fill: #137880;
-}
-body .axis-label {
+body .axis-label, body .dropdown-label {
   font-size: 2em;
   fill: #635F5D;
+  color: #635F5D;
+}
+body .dropdown-label {
+  margin-left: 100px;
+  margin-right: 15px;
 }
 
 /*# sourceMappingURL=App.css.map */

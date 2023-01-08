@@ -8,6 +8,30 @@ body {
     
   }
 
+  h1 { 
+    text-align: center;
+    font-size: 2.5em;
+    color: #635F5D;
+  }
+
+  .Dropdown-root {
+    width: 300px;
+    display: inline-block;
+    font-size: 1.5em;
+  }
+
+  .Dropdown-menu {
+    max-height: 500px;
+  }
+
+  .menus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 60px;
+  }
+
   #vg-tooltip-element {
     font-size: 20px;
     color: #3e3c38;
@@ -22,12 +46,18 @@ body {
     }
   }
 
-  .mark {
-    fill: #137880;
-  }
+  // .mark {
+  //   fill: #137880;
+  // }
 
-  .axis-label {
+  .axis-label, .dropdown-label {
     font-size: 2em;
     fill: #635F5D;
+    color: #635F5D;
+  }
+
+  .dropdown-label {
+    margin-left: 100px;
+    margin-right: 15px;
   }
 }

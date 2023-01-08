@@ -41,6 +41,8 @@ In addition, each significant stage has been given a specific branch so that any
 
 [Nodejs Refernce](https://nodejs.org/en/docs/)
 
+[Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 ## Other Data Resources
 
 [Reuters Graphics](https://www.reuters.com/graphics/)

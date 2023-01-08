@@ -9,6 +9,8 @@
     "d3": "^7.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropdown": "^1.11.0",
+    "react-dropdown-browser": "^1.8.0",
     "react-scripts": "^5.0.1",
     "sass": "^1.57.1",
     "vega": "^5.22.1",
