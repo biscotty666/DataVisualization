@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+body pre {
+  font-size: 7em;
+}
+body #vg-tooltip-element {
+  font-size: 20px;
+  color: #3e3c38;
+}
+body .tick line {
+  stroke: #C0C0BB;
+}
+body .tick text {
+  fill: #635F5D;
+}
+body .marks circle {
+  fill: #137880;
+}
+body .marks path {
+  stroke: #137880;
+  stroke-width: 5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+body .axis-label {
+  font-size: 2em;
+  fill: #635F5D;
+}
+
+/*# sourceMappingURL=App.css.map */

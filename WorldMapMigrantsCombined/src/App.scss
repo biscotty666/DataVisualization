@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+
+  pre {
+    font-size: 7em;
+  }
+
+  #vg-tooltip-element {
+    font-size: 20px;
+    color: #3e3c38;
+  }
+
+  .bubble-map {
+    
+  }
+  .map-marks {
+    .land {
+      fill: #ececec;
+    }
+    .sphere {
+      fill: #fbfbfb;
+    }
+    .interiors {
+      fill: none;
+      stroke: #d9dfe0;
+    }
+    .graticules {
+      fill: none;
+      stroke: #ececec;
+    }
+    circle {
+      fill: #137B80;
+      opacity: 0.3;
+    }
+  }
+
+  .hist-marks {
+    fill: #137B80;
+  }
+
+  .axis-label {
+    font-size: 0.7em;
+    fill: #635F5D;
+  }
+
+  .tick {
+    line {
+      fill: none;
+      stroke: #ececec;
+    }
+    text {
+      fill: #635F5D;
+      font-size: 0.5em;
+    }
+  }
+  
+
+}

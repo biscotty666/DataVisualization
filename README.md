@@ -25,6 +25,17 @@ In addition, each significant stage has been given a specific branch so that any
 
 ## Data Resources Used
 
+[Missing Migrants Project](https://missingmigrants.iom.int/data)
+
+[Curran's MM Dataset](https://gist.githubusercontent.com/curran/a9656d711a8ad31d812b8f9963ac441c/raw/c22144062566de911ba32509613c84af2a99e8e2/MissingMigrants-Global-2019-10-08T09-47-14-subset.csv)
+
+
+
+
+[World City Database (simplemaps)](https://simplemaps.com/data/world-cities)
+
+[Curran's World Cities Gist](https://gist.github.com/curran/13d30e855d48cdd6f22acdf0afe27286)
+
 ## d3 Block Samples
 
 [Observable HQ](https://observablehq.com/@biscotty666)

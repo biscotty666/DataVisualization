@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+body h1 {
+  text-align: center;
+  color: #322c29;
+}
+body pre {
+  font-size: 7em;
+}
+body #vg-tooltip-element {
+  font-size: 20px;
+  color: #3e3c38;
+}
+body .map-marks .land {
+  fill: #ececec;
+}
+body .map-marks .sphere {
+  fill: #fbfbfb;
+}
+body .map-marks .interiors {
+  fill: none;
+  stroke: #d9dfe0;
+}
+body .map-marks .graticules {
+  fill: none;
+  stroke: #ececec;
+}
+body .map-marks circle {
+  fill: #137B80;
+  opacity: 0.3;
+}
+body .hist-marks {
+  fill: #137B80;
+}
+body .axis-label {
+  font-size: 0.7em;
+  fill: #635F5D;
+}
+body .tick line {
+  fill: none;
+  stroke: #ececec;
+}
+body .tick text {
+  fill: #635F5D;
+  font-size: 0.5em;
+}
+
+/*# sourceMappingURL=App.css.map */

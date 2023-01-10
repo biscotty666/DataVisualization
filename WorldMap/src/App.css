@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+body pre {
+  font-size: 7em;
+}
+body #vg-tooltip-element {
+  font-size: 20px;
+  color: #3e3c38;
+}
+body .marks .land {
+  fill: #137B80;
+}
+body .marks .sphere {
+  fill: #ececec;
+}
+body .marks .interiors {
+  fill: none;
+  stroke: #339498;
+}
+body .marks .graticules {
+  fill: none;
+  stroke: #dadada;
+}
+
+/*# sourceMappingURL=App.css.map */
