@@ -22,11 +22,10 @@ const xAxisTickFormat = timeFormat("%d/%m/%Y")
 
 const xAxisLabel = 'Time';
 
-const yValue = d => d['Total Dead and Missing'];
 const yAxisLabel = 'Total Dead and Missing';
 
 
-export const DateHistogram = ({ data, width, height, setBrushExtent, xValue }) => {
+export const DateHistogram = ({ data, width, height, setBrushExtent, xValue, yValue }) => {
   const brushRef = useRef()
 
   const innerHeight = height - margin.top - margin.bottom;

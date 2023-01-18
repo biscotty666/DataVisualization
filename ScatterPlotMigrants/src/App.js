@@ -1,5 +1,5 @@
 import "./App.css";
-import { scaleLinear, timeFormat, extent, scaleTime } from "d3";
+import { max, scaleLog, timeFormat, extent, scaleTime } from "d3";
 import { useData } from "./components/useData";
 import { AxisBottom } from "./components/AxisBottom";
 import { AxisLeft } from "./components/AxisLeft";
@@ -36,8 +36,8 @@ const App = () => {
     .range([0, innerWidth])
     .nice();
 
-  const yScale = scaleLinear()
-    .domain(extent(data, yValue))
+  const yScale = scaleLog()
+    .domain([1, max(data, yValue)])
     .range([innerHeight , 0])
     .nice()
 

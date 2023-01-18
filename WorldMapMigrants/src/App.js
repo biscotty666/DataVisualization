@@ -9,6 +9,8 @@ const width = 960;
 const height = 500;
 const dateHistogramSize = 0.3
 const xValue = d => d['Reported Date'];
+const yValue = d => d['Total Dead and Missing'];
+
 
 const App = () => {
   const worldAtlas = useWorldAtlas();
@@ -28,7 +30,8 @@ const App = () => {
 
   return (
     <>
-    <h1>Migrants Dead and Missing</h1>
+    <h1>Dead and Missing Migrants</h1>
+    <div id='wrapper'>
     <svg width={width} height={height}>
         <BubbleMap data={data} filteredData={filteredData} worldAtlas={worldAtlas} />
         <g transform={`translate(0, ${height - dateHistogramSize * height})`}>
@@ -38,9 +41,11 @@ const App = () => {
             height={dateHistogramSize * height} 
             setBrushExtent={setBrushExtent}
             xValue={xValue}
+            yValue={yValue}
           />
         </g>
     </svg>
+    </div>
     </>
   );
 };
