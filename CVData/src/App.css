@@ -29,5 +29,9 @@ body svg .tick text {
   fill: #565656;
   font-size: 14px;
 }
+body svg .axis-label {
+  fill: #808080;
+  font-size: 24px;
+}
 
 /*# sourceMappingURL=App.css.map */
