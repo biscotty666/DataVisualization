@@ -1,6 +1,7 @@
 import { extent, line, max, scaleLinear, scaleTime } from "d3"
 import { YMarkerLine } from "./YMarkerLine"
 import { XMarkerLine } from "./XMarkerLine"
+import { XAxis } from "./XAxis"
 
 const xValue = d => d.date
 const yValue = d => d.deathTotal
@@ -29,8 +30,17 @@ export const LineChart = ({ data, width, height }) => {
 
   return <svg width={width} height={height}>
     <g transform={`translate(${margin.left}, ${margin.top})`}>
-      <YMarkerLine value={10000} yScale={yScale} innerWidth={innerWidth} />
-      <XMarkerLine value={mostRecentDate} xScale={xScale} innerHeight={innerHeight} />
+      <YMarkerLine 
+        value={10000} 
+        yScale={yScale} 
+        innerWidth={innerWidth} 
+      />
+      <XMarkerLine 
+        value={mostRecentDate} 
+        xScale={xScale} 
+        innerHeight={innerHeight} 
+      />
+      <XAxis xScale={xScale} innerHeight={innerHeight} />
       <path d={lineGenerator(data)} />
 
     </g>

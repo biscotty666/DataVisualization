@@ -19,5 +19,15 @@ body svg path {
 body svg text {
   font-size: 2em;
 }
+body svg .domain {
+  display: none;
+}
+body svg .tick line {
+  stroke: #bbbbbb;
+}
+body svg .tick text {
+  fill: #565656;
+  font-size: 14px;
+}
 
 /*# sourceMappingURL=App.css.map */

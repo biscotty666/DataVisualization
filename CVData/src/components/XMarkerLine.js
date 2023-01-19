@@ -16,7 +16,7 @@ export  const XMarkerLine = ({ value, xScale, innerHeight }) => {
         alignmentBaseline="hanging"
         x={markerLineX}
         y={markerLineY2 + 8}>
-        Now
+        now
       </text>
     </>
   )

@@ -2,7 +2,8 @@ body {
   background-color: rgb(230, 212, 173);
   margin: 0;
   overflow: hidden;
-  font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 
   svg {
     background-color: white;
@@ -20,6 +21,20 @@ body {
 
     text {
       font-size: 2em;
+    }
+
+    .domain {
+      display: none;
+    }
+
+    .tick {
+      line {
+        stroke: #bbbbbb;
+      }
+      text {
+        fill: #565656;
+        font-size: 14px;
+      }
     }
   }
 }
