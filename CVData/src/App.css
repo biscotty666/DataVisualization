@@ -13,8 +13,7 @@ body svg .marker-line {
 }
 body svg path {
   fill: none;
-  stroke: black;
-  stroke-width: 10px;
+  stroke-width: 5px;
 }
 body svg text {
   font-size: 2em;

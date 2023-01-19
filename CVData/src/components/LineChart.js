@@ -11,24 +11,40 @@ export const LineChart = ({ data, width, height }) => {
   const innerWidth = width - margin.left - margin.right
   const innerHeight = height - margin.top - margin.bottom
 
+  const allData = data.reduce(
+    (accumulator, countryTimeseries ) => accumulator.concat(countryTimeseries), 
+    []
+  )
+
+  const epsilon = 1
 
   const xScale = scaleTime()
-    .domain(extent(data, xValue))
+    .domain(extent(allData, xValue))
     .range([0, innerWidth])
 
   const yScale = scaleLog()
-    .domain([1, max(data, yValue)])
+    .domain([epsilon, max(allData, yValue)])
     .range([innerHeight, 0])
 
   const lineGenerator = line()
     .x(d => xScale(xValue(d)))
-    .y(d => yScale(yValue(d)))
+    .y(d => yScale(epsilon + yValue(d)))
 
   return <svg width={width} height={height}>
     <g transform={`translate(${margin.left}, ${margin.top})`}>
       <XAxis xScale={xScale} innerHeight={innerHeight} />
       <YAxis yScale={yScale} innerWidth={innerWidth} />
-      <path d={lineGenerator(data)} />
+      {
+        data.map(countryTimeseries => {
+          const strokeColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255} )`
+          return (
+            <path 
+              stroke={strokeColor}
+              d={lineGenerator(countryTimeseries)} 
+            />
+          )
+        })
+      }
       <text 
         transform={`translate(${innerWidth / 2},0)`}
         text-anchor="middle"  
