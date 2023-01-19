@@ -1,23 +1,38 @@
 import { extent, line, max, scaleLinear, scaleTime } from "d3"
+import { YMarkerLine } from "./YMarkerLine"
+import { XMarkerLine } from "./XMarkerLine"
 
 const xValue = d => d.date
 const yValue = d => d.deathTotal
 
-export const LineChart = ({data, width, height}) => {
+const margin = { top: 40, right: 80, bottom: 50, left: 150 }
+
+export const LineChart = ({ data, width, height }) => {
+  const innerWidth = width - margin.left - margin.right
+  const innerHeight = height - margin.top - margin.bottom
+
 
   const xScale = scaleTime()
     .domain(extent(data, xValue))
-    .range([0, width])
+    .range([0, innerWidth])
 
   const yScale = scaleLinear()
     .domain([0, max(data, yValue)])
-    .range([height, 0])
+    .range([innerHeight, 0])
 
   const lineGenerator = line()
     .x(d => xScale(xValue(d)))
     .y(d => yScale(yValue(d)))
 
-  return <svg  width={width} height={height}>
-    <path d={lineGenerator(data)} />
+  const mostRecentDate = xScale.domain()[1]
+
+
+  return <svg width={width} height={height}>
+    <g transform={`translate(${margin.left}, ${margin.top})`}>
+      <YMarkerLine value={10000} yScale={yScale} innerWidth={innerWidth} />
+      <XMarkerLine value={mostRecentDate} xScale={xScale} innerHeight={innerHeight} />
+      <path d={lineGenerator(data)} />
+
+    </g>
   </svg>
 }

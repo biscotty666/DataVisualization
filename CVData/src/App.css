@@ -2,14 +2,22 @@ body {
   background-color: rgb(230, 212, 173);
   margin: 0;
   overflow: hidden;
+  font-family: --apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 body svg {
   background-color: white;
 }
-body path {
+body svg .marker-line {
+  stroke: black;
+  stroke-width: 5px;
+}
+body svg path {
   fill: none;
   stroke: black;
   stroke-width: 10px;
+}
+body svg text {
+  font-size: 2em;
 }
 
 /*# sourceMappingURL=App.css.map */
