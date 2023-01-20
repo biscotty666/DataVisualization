@@ -8,12 +8,19 @@ body svg {
   background-color: white;
 }
 body svg .marker-line {
-  stroke: black;
-  stroke-width: 5px;
+  stroke: #a2a2a2;
+  stroke-width: 2px;
 }
 body svg path {
   fill: none;
-  stroke-width: 5px;
+  stroke: gray;
+  opacity: 0.7;
+  stroke-width: 2.5px;
+}
+body svg .voronoi path {
+  fill: none;
+  stroke: pink;
+  opacity: 0.1;
 }
 body svg text {
   font-size: 2em;
@@ -22,7 +29,7 @@ body svg .domain {
   display: none;
 }
 body svg .tick line {
-  stroke: #bbbbbb;
+  stroke: #dedede;
 }
 body svg .tick text {
   fill: #565656;

@@ -4,8 +4,11 @@ import "./App.css";
 import { useData } from "./components/useData";
 import { LineChart } from "./components/LineChart";
 
-const width = window.innerWidth
+// const width = window.innerWidth
 const height = window.innerHeight
+
+const width = window.innerWidth
+// const height = 600
 console.log(width, height)
 
 const App = () => {

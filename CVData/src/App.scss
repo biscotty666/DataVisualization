@@ -9,13 +9,23 @@ body {
     background-color: white;
 
     .marker-line {
-      stroke: black;
-      stroke-width: 5px;
+      stroke: #a2a2a2;
+      stroke-width: 2px;
     }
 
     path {
       fill: none;
-      stroke-width: 5px;
+      stroke: gray;
+      opacity: 0.7;
+      stroke-width: 2.5px;
+    }
+
+    .voronoi {
+      path {
+        fill: none;
+        stroke: pink;
+        opacity: 0.1;
+      }
     }
 
     text {
@@ -28,7 +38,7 @@ body {
 
     .tick {
       line {
-        stroke: #bbbbbb;
+        stroke: #dedede;
       }
       text {
         fill: #565656;

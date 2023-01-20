@@ -6,7 +6,7 @@ import { csv, timeParse } from "d3"
 
 const csvUrl = 'https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv'
 
-// const sum = (accumulator, currentValue) => accumulator + currentValue
+const sum = (accumulator, currentValue) => accumulator + currentValue
 
 const parseDay = timeParse('%m/%d/%y')
 
@@ -17,14 +17,17 @@ const transform = rawData => {
 
 
   const days = rawData.columns.slice(4)
+  console.log(countriesData[0])
 
+  // console.log(countriesData)
   return countriesData.map(d => {
     // const countryName = d['Country/Region']
-    // console.log(countryName)
     return days.map(day => ({
       date: parseDay(day),
-      deathTotal: +d[day]
+      deathTotal: +d[day],
+      // countryName
   }))
+  
 
   })    
 
@@ -32,7 +35,7 @@ const transform = rawData => {
 
 export const useData = () => {
   const [data, setData] = useState()
-  console.log(data)
+  // console.log(data)
   useEffect(() => {
     csv(csvUrl).then(rawData => {
       setData(transform(rawData))

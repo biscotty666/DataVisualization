@@ -1,15 +1,18 @@
 import { extent, line, max, scaleLog, scaleTime } from "d3"
 import { XAxis } from "./XAxis"
 import { YAxis } from "./YAxis"
+import { useCallback } from "react"
+import { VoronoiOverlay } from "./VoronoiOverlay"
 
-const xValue = d => d.date
-const yValue = d => d.deathTotal
+const xValue = (d) => d.date
+const yValue = (d) => d.deathTotal
 
 const margin = { top: 40, right: 40, bottom: 80, left: 70 }
 
 export const LineChart = ({ data, width, height }) => {
   const innerWidth = width - margin.left - margin.right
   const innerHeight = height - margin.top - margin.bottom
+  console.log(innerHeight,innerWidth)
 
   const allData = data.reduce(
     (accumulator, countryTimeseries ) => accumulator.concat(countryTimeseries), 
@@ -26,9 +29,15 @@ export const LineChart = ({ data, width, height }) => {
     .domain([epsilon, max(allData, yValue)])
     .range([innerHeight, 0])
 
+  // console.log(max(allData))
+
   const lineGenerator = line()
     .x(d => xScale(xValue(d)))
     .y(d => yScale(epsilon + yValue(d)))
+
+  const handleVoronoiHover = useCallback(() => {
+    console.log('Hovered')
+  },[])
 
   return <svg width={width} height={height}>
     <g transform={`translate(${margin.left}, ${margin.top})`}>
@@ -36,12 +45,9 @@ export const LineChart = ({ data, width, height }) => {
       <YAxis yScale={yScale} innerWidth={innerWidth} />
       {
         data.map(countryTimeseries => {
-          const strokeColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255} )`
+          // const strokeColor = `rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255} )`
           return (
-            <path 
-              stroke={strokeColor}
-              d={lineGenerator(countryTimeseries)} 
-            />
+            <path d={lineGenerator(countryTimeseries)} />
           )
         })
       }
@@ -66,6 +72,14 @@ export const LineChart = ({ data, width, height }) => {
       >
         Time
       </text>
+      <VoronoiOverlay 
+        onHover={handleVoronoiHover} 
+        innerHeight={innerHeight}
+        innerWidth={innerWidth}
+        allData={allData}
+        lineGenerator={lineGenerator}
+        epsilon={epsilon}
+      />
     </g>
   </svg>
 }
